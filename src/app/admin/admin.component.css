@@ -1,0 +1,35 @@
+
+.form-container {
+    box-sizing: border-box;
+    padding-left: 22px;
+    padding-top: 100px;
+    display: block;
+    width: inherit;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  label{
+    display: block;
+  }
+  input.reviewIn{
+    width: -webkit-fill-available;
+  }
+  
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }

@@ -1,0 +1,24 @@
+div.page-width {
+  box-sizing: border-box;
+  padding-left: 22px;
+
+  width: fit-content;
+  display: block;
+  width: inherit;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+div.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 210px;
+}
+img {
+  width: 200px;
+  padding: 10px;
+  height: 300px;
+}
+#item:hover {
+  transform: scale(1.2);
+}

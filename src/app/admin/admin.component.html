@@ -1,0 +1,22 @@
+<app-header></app-header>
+<form #uploadForm class="form-container">
+    <h1>Upload a New Movie</h1>
+    <label for="Name"><b>Movie Name</b></label>
+    <input
+      class="movieName"
+      type="text"
+      required
+      max="10"
+      min="1"
+      placeholder="Enter a movie Name"
+      name="movieName"
+    />
+
+    <label for="FileInput"><b>Upload Movie Cover Image</b></label>
+    <input type="file" class="fileUpload" placeholder="Choose File" name="FileInput"  />
+
+    <button type="submit" class="btn" >Clear</button>
+    <button type="reset" class="btn cancel">
+      Close
+    </button>
+  </form>

@@ -1,0 +1,30 @@
+nav.navbar {
+  height: 50px;
+  background: linear-gradient(10deg, #4b71c4, #90c1dd);
+}
+h1 {
+  line-height: 0.7;
+  color: white;
+}
+
+a {
+  color: #e4e9ef;
+}
+#navBar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+nav {
+  z-index: 2;
+}
+#login {
+  padding-top: 5px;
+}
+#register {
+  padding-top: 5px;
+}
+#separator {
+  padding-top: 7px;
+}

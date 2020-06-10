@@ -1,0 +1,25 @@
+<div id="item" class="item">
+  <a>
+    <img
+      src="../assets/images/{{ item.id }}.jpg"
+      class="card-image"
+      id="{{ item.id }}"
+      alt="{{ item.overview }}"
+      (click)="openNav($event)"
+    />
+
+    <p class="movieName" id="{{ item.id }}">
+      {{ item.title }}
+    </p>
+    <p
+      style="
+        margin-right: 3px;
+        margin-left: 3px;
+        color: red;
+        background-color: black;
+      "
+    >
+      Rating: {{item.vote_average }}
+    </p>
+  </a>
+</div>

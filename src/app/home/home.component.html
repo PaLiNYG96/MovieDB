@@ -1,0 +1,35 @@
+<app-header (searchText)="filterSearch($event)"></app-header>
+<div>
+  <div class="spromos"  (click)="closeNav()">
+    <p id="bigTitle">Mohammad's Movie DB</p>
+  </div>
+  <div id="products">
+    <div>
+      <h1 class="d-flex justify-content-center" id="homeSeperator"  (click)="closeNav()">
+        Trending Movies
+      </h1>
+    </div>
+  </div>
+  <div class="page-container drawer=page-content">
+    <main>
+      <div class="page-width" style="box-sizing: content-box;">
+        <ul class="grid grid--uniform grid view-items">
+          <div class="list-items">
+            <div class="productBlockContainer columns-4">
+              <div class="prod-item fadeIn">
+                <article class="main-content js-focus-hidden">
+                  <div class="page-width">
+                    <app-item
+                      *ngFor="let item of itemsElement"
+                      [itemsElement]="item"
+                    ></app-item>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </main>
+  </div>
+</div>

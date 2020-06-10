@@ -1,0 +1,37 @@
+<div class="sidenav" id="sideNav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <img id="inView" src="" alt="" class="card-image" mo-id="" />
+  <div>
+    <h4 class="synopsis" id="overView"></h4>
+    <button class="open-button" (click)="openForm()" *ngIf="isAuthenticated">
+      Add a Review
+    </button>
+    <div class="form-popup" id="myForm">
+      <form #reviewFrom (ngSubmit)="onSubmit($event)" class="form-container">
+        <h1>FeedBack</h1>
+
+        <label for="Rating"><b>Rating</b></label>
+        <input
+          class="reviewIn"
+          type="number"
+          required
+          max="10"
+          min="1"
+          placeholder="Rate from 1 to 10"
+          ngModel="newVote"
+          (keyup)="onEvent($event)"
+          (change)="onEvent($event)"
+          name="rating"
+        />
+
+        <label for="comment"><b>Comment</b></label>
+        <input class="reviewIn" placeholder="Add a Comment" name="comment"  />
+
+        <button type="submit" class="btn" [disabled]="!isValid" >Submit</button>
+        <button type="reset" class="btn cancel" (click)="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

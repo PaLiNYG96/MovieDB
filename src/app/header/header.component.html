@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md" id="navBar" (click)="closeNav()">
+  <a class="navbar-brand" href="/Home">MoDB</a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item p-2">
+        <a class="nav-link" routerLink="/Admin" *ngIf="isAuthenticated">Admin</a>
+      </li>
+    </ul>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <form id="searchForm" class="form-inline my-2 my-lg-0">
+          <input
+            [(ngModel)]="newSearch"
+            (keyup)="searchFor()"
+            class="form-control mr-sm-2"
+            type="search"
+            maxlength="35"
+            aria-label="Search"
+            placeholder="Search"
+            id="searchBox"
+            name="search"
+          />
+          <button
+            (click)="searchFor()"
+            class="btn btn-dark my-2 my-sm-0"
+            style="border-color: #34da00; color: white;"
+            type="submit"
+          >
+            Search
+          </button>
+        </form >
+        <li id="login" class="nav-item" *ngIf="!isAuthenticated">
+          <a class="nav-link" routerLink="/login" (click)="closeNav()">Login</a>
+        </li>
+        <h1 id="separator" *ngIf="!isAuthenticated">|</h1>
+        <li id="register" class="nav-item" *ngIf="!isAuthenticated">
+          <a class="nav-link" routerLink="/register" (click)="closeNav()">Register</a>
+        </li>
+        <li id="logout" class="nav-item" *ngIf="isAuthenticated" >
+          <a class="nav-link" routerLink="/login" (click)="closeNav()" (click)="onLogout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
